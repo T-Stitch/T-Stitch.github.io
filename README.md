@@ -1,6 +1,6 @@
 # T-Stitch: Accelerating Sampling in Pre-trained Diffusion Models with Trajectory Stitching
 
-This is the repository that contains source code for the [Nerfies website](https://T-Stitch.github.io).
+This is the repository that contains source code for the [T-Stitch website](https://T-Stitch.github.io).
 
 
 
