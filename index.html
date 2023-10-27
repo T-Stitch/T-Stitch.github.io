@@ -205,167 +205,16 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- <div class="columns is-centered"> -->
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div> -->
-    <!-- </div> -->
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <center><h2 class="title is-3">T-Stitch Interpolates the Speed, Content and Style between Small and Large SD Models</h2></center>
-        <br/>
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3> -->
-        <!-- <div class="content has-text-justified">
-          
-
-        
-        </div> -->
-
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/inter_start0.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-           <a href="https://huggingface.co/CompVis/stable-diffusion-v1-4">CompVis/stable-diffusion-v1-4</a>
-          </div>
-          <div class="column interpolation-video-column">
-            <br/>
-            <center><p style="color:rgb(0, 0, 0);">"a vase with different flowers"</p></center>
-            <br/>
-            <div id="interpolation-image-wrapper0">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider0"
-                   step="1" min="0" max="50" value="25" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/inter_end0.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <a href="https://huggingface.co/nota-ai/bk-sdm-tiny">nota-ai/bk-sdm-tiny</a>
-          </div>
-        </div>
-
-        <br/>
-
-        <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center> -->
-        <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>,nvinkpunk stylenvinkpunk stylenvinkpunk stylenvinkpunk stylenvinkpunk style nvinkpunk style"</p></center> -->
-        <!-- <br/> -->
-        <div class="columns is-vcentered interpolation-panel">
-          <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center> -->
-
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-           <a href="https://huggingface.co/Envvi/Inkpunk-Diffusion">Envvi/Inkpunk-Diffusion</a>
-          </div>
-          <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center> -->
-
-          <div class="column interpolation-video-column">
-            <br/>
-            <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center>
-            <br/>
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="50" value="10" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <a href="https://huggingface.co/nota-ai/bk-sdm-tiny">nota-ai/bk-sdm-tiny</a>
-          </div>
-        </div>
-
-
-        <br/>
-
-
-
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/inter_start1.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-           <a href="https://huggingface.co/nitrosocke/Ghibli-Diffusion">nitrosocke/Ghibli-Diffusion</a>
-          </div>
-          <div class="column interpolation-video-column">
-            <br/>
-            <center><p style="color:rgb(0, 0, 0);">"a ghibli style princess with golden hair in <font color="#0091FF">New York City</font>"</p></center>
-            <br/>
-            <div id="interpolation-image-wrapper2">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider2"
-                   step="1" min="0" max="50" value="14" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/inter_end1.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <a href="https://huggingface.co/nota-ai/bk-sdm-tiny">nota-ai/bk-sdm-tiny</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="section">
   <div class="container is-max-desktop content">
     <center><h2 class="title">T-Stitch is Complementary to <font color="#0091FF"> Different Denoiser Architectures</font></h2></center>
     </br>
-    <center><h3>Transformer</h3></center>
+    <center><h3> Transformer </h3></center>
+    <!-- <center><h3> <font color="#00afb9">Transformer</font></h3></center> -->
     <img src="./static/images/exp_res/dit_diff.png"/>
     <center><p>T-Stitch of two model combinations: DiT-XL/S, DiT-XL/B and DiT-B/S. We adopt DDIM
       100 timesteps with a classifier-free guidance scale of 1.5.</p></center>
     </br>
+    <!-- <center><h3><font color="#f6aa1c">U-Net</font></h3></center> -->
     <center><h3>U-Net</h3></center>
     <center><p>T-Stitch with U-Net based LDM (<a href="https://arxiv.org/abs/2112.10752">Rombach et al., 2022</a>) and LDM-S on class-conditional ImageNet. All
       evaluations are based on DDIM and 100 timesteps. We adopt a classifier-free guidance scale of 3.0.
@@ -373,8 +222,8 @@
       <img src="./static/images/exp_res/unet.png"/>
     </br>
     </br>
-
     <center><h3>Different Model Families</h3></center>
+    <!-- <center><h3><font color="#f07167">Different Model Families</font></h3></center> -->
       <center><p>T-Stitch with DiT-S and U-ViT H (<a href="https://arxiv.org/abs/2209.12152">Bao et al., 2023</a>), under DPM-Solver++, 50 steps, guidance scale of 1.5. The time cost is measured by generating 8 images on one RTX 3090.</p></center>
       <img src="./static/images/exp_res/uvit_dit.png"/>
 
@@ -423,16 +272,146 @@
         and CLIP score (Hessel et al., 2021) on MS-COCO 256x256 benchmark. The time cost is measured
         by generating one image on one RTX 3090.</p>
       <img src="./static/images/exp_res/sd.png"/>
-      </br>
-    </br>
+      <!-- </br> -->
+    <!-- </br>
       <center><h2 class="title">More Examples for Stable Diffusion</h2></center>
       <img src="./static/images/exp_res/app_sd_examples.jpg"/>
     </br>
       <img src="./static/images/exp_res/app_nvpunk_examples.jpg"/>
     </br>
-      <img src="./static/images/exp_res/app_ghibli_examples.jpg"/>
+      <img src="./static/images/exp_res/app_ghibli_examples.jpg"/> -->
   </div>
 </section>
+<!-- <section class="section">
+  <div class="container is-max-desktop content">
+    <center><h2 class="title">More Examples for Stable Diffusion</h2></center>
+    <img src="./static/images/exp_res/app_sd_examples.jpg"/>
+  </br>
+    <img src="./static/images/exp_res/app_nvpunk_examples.jpg"/>
+  </br>
+    <img src="./static/images/exp_res/app_ghibli_examples.jpg"/>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <center><h2 class="title is-3">T-Stitch Interpolates the Speed, Content and Style between Small and Large SD Models</h2></center>
+        <br/>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/inter_start0.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+           <a href="https://huggingface.co/CompVis/stable-diffusion-v1-4">CompVis/stable-diffusion-v1-4</a>
+          </div>
+          <div class="column interpolation-video-column">
+            <br/>
+            <center><p style="color:rgb(0, 0, 0);">"a vase with different flowers"</p></center>
+            <br/>
+            <div id="interpolation-image-wrapper0">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider0"
+                   step="1" min="0" max="50" value="25" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/inter_end0.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <a href="https://huggingface.co/nota-ai/bk-sdm-tiny">nota-ai/bk-sdm-tiny</a>
+          </div>
+        </div>
+
+        <br/>
+        <br/>
+
+        <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center> -->
+        <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>,nvinkpunk stylenvinkpunk stylenvinkpunk stylenvinkpunk stylenvinkpunk style nvinkpunk style"</p></center> -->
+        <!-- <br/> -->
+        <div class="columns is-vcentered interpolation-panel">
+          <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center> -->
+
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+           <a href="https://huggingface.co/Envvi/Inkpunk-Diffusion">Envvi/Inkpunk-Diffusion</a>
+          </div>
+          <!-- <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center> -->
+
+          <div class="column interpolation-video-column">
+            <br/>
+            <center><p style="color:rgb(0, 0, 0);">"a squirrel in <font color="#0091FF";>the park</font>, nvinkpunk style"</p></center>
+            <br/>
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="50" value="10" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <a href="https://huggingface.co/nota-ai/bk-sdm-tiny">nota-ai/bk-sdm-tiny</a>
+          </div>
+        </div>
+
+
+        <br/>
+        <br/>
+
+
+
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/inter_start1.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+           <a href="https://huggingface.co/nitrosocke/Ghibli-Diffusion">nitrosocke/Ghibli-Diffusion</a>
+          </div>
+          <div class="column interpolation-video-column">
+            <br/>
+            <center><p style="color:rgb(0, 0, 0);">"a ghibli style princess with golden hair in <font color="#0091FF">New York City</font>"</p></center>
+            <br/>
+            <div id="interpolation-image-wrapper2">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider2"
+                   step="1" min="0" max="50" value="14" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/inter_end1.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <a href="https://huggingface.co/nota-ai/bk-sdm-tiny">nota-ai/bk-sdm-tiny</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <!-- </br> -->
+
+    <div class="container is-max-desktop content">
+    </br>
+      <center><h2 class="title">More Examples for Stable Diffusion</h2></center>
+    </br>
+      <img src="./static/images/exp_res/app_sd_examples.jpg"/>
+    </br>
+      <img src="./static/images/exp_res/app_nvpunk_examples.jpg"/>
+    </br>
+      <img src="./static/images/exp_res/app_ghibli_examples.jpg"/>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
