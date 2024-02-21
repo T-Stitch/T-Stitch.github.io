@@ -167,34 +167,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Diffusion probabilistic models (DPMs) achieve great success in generating high-quality data 
-            such as images and videos. However, sampling from DPMs at inference time is often expensive 
-            for high-quality generation and typically requires hundreds of steps with a large network model.
+            Sampling from diffusion probabilistic models (DPMs) is often expensive for high-quality image 
+            generation and typically requires many steps with a large model. 
+            In this paper, we introduce sampling Trajectory Stitching (<strong>T-Stitch</strong>), a 
+            simple yet efficient technique to improve the sampling efficiency with little or no generation 
+            degradation. 
           </p>
           <p>
-            In this paper, we introduce sampling Trajectory Stitching (<strong>T-Stitch</strong>), a simple yet 
-            efficient technique to improve the generation efficiency with little or no loss in the 
-            generation quality. Instead of solely using a large DPM for the entire sampling trajectory, 
-            T-Stitch first leverages a smaller DPM in the initial steps as a cheap drop-in replacement 
-            of the larger DPM and switches to the larger DPM at a later stage. 
-          </p>
+            Instead of solely using a large DPM for the entire sampling trajectory, T-Stitch 
+            first leverages a smaller DPM in the initial steps as a cheap drop-in replacement of the larger 
+            DPM and switches to the larger DPM at a later stage. Our key insight is that different diffusion 
+            models learn similar encodings under the same training data distribution and smaller models are 
+            capable of generating good global structures in the early steps. 
           <p>
-            The key reason why T-Stitch works is that different diffusion models learn similar encodings 
-            under the same training data distribution. While smaller models are not as effective in refining 
-            high-frequency details in later denoising steps, they are still capable of generating good global 
-            structures in the early steps. Thus, smaller models can be used in early steps to reduce the 
-            computational cost. Notably, T-Stitch does not need any further training and uses only pretrained 
-            models. Thus, it can be easily combined with other fast sampling techniques to obtain further 
-            efficiency gains across different architectures and samplers.
+            Extensive experiments demonstrate that T-Stitch is training-free, generally applicable for different architectures, 
+            and complements most existing fast sampling techniques with flexible speed and quality trade-offs. 
+            On DiT-XL, for example, 40% of the early timesteps can be safely replaced with a 10x faster DiT-S 
+            without performance drop on class-conditional ImageNet generation. We further show that our method 
+            can also be used as a drop-in technique to not only accelerate the popular pretrained stable diffusion 
+            (SD) models but also improve the prompt alignment of stylized SD models from the public model zoo.
           </p>
-          <p>
-            On DiT-XL, for example, 40% of the early timesteps can be safely replaced with a 10x faster 
-            DiT-S without performance drop on class-conditional ImageNet generation. By allocating different 
-            fractions of small and large DPMs along the sampling trajectory, we can achieve flexible speed 
-            and quality trade-offs. We further show that our method can also be used as a drop-in technique 
-            to not only accelerate the popular pretrained stable diffusion (SD) models but also improve 
-            the prompt alignment of stylized SD models from the public model zoo.
-          </p>
+          
         </div>
       </div>
     </div>
